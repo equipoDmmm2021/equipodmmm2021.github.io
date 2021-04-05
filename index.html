@@ -1,1 +1,186 @@
-¡Hola mundo somos el equipo D!
+<!DOCTYPE html>
+<html lang="es">
+<title>Pillow Fights</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="almohada.jpg" type="image/x-icon">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.w3-quarter img{margin-bottom: -6px; cursor: pointer}
+.w3-quarter img:hover{opacity: 0.6; transition: 0.3s}
+</style>
+<body class="w3-dark-grey">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
+  <a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">SALIR</a> 
+  <a href="#pillowfights" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">PILLOW FIGHTS</a>
+  <a href="#characters" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">PERSONAJES</a>
+  <a href="#weapons" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">ARMAS</a>
+  <!--NO HECHO   <a href="#maps" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">MAPAS</a>-->
+  <a href="#music" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">MÚSICA</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">SOBRE NOSOTROS</a> 
+  <a href="#objectives" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">OBJETIVOS</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
+  <span class="w3-left w3-padding">PILLOW FIGHTS</span>
+  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content w3-justify" style="max-width:1000px;margin-top:100px" id="pillowfights">
+  <!-- Pillow Fights -->
+  <h4 class="w3-content w3-center" style="max-width:600px">Pillow Fights</h4>
+  <p>Pillow Fights es un juego de peleas al estilo clásico en 2D.</p>
+  <p>En un mundo en el que el odio invade a todo aquel que existe, una empresa de videojuegos creó una consola capaz de transportarte a un mundo en el que puedes deshacerte de ese odio. Los jugadores se desahogan luchando entre ellos con los personajes que ellos mismos imaginan. A que esperas adentrate en el mundo de Pillow Fights y preparate para la batalla más soñada.</p>
+  <div class="w3-content w3-center">
+    <video width="640" height="480" controls>
+      <source src="nervegear.mp4" type="video/mp4">
+    </video>
+  </div>
+  <hr class="w3-opacity">
+
+</div>
+<div class="w3-main w3-content" style="max-width:1600px;margin-top:83px" id="characters">
+  <!-- Characters -->
+  <h4 class="w3-content w3-center" style="max-width:600px">Personajes</h4>
+  <div class="w3-row w3-grayscale-min">
+    <div class="w3-quarter">
+      <img src="mekelele.png" style="width:100%" onclick="onClick(this)" alt="Mekelele">
+      <img src="proximamente.jpg" style="width:50%" onclick="onClick(this)" alt="Personaje 5">
+      <img src="sub-zero.jpg" style="width:100%" onclick="onClick(this)" alt="Sub-Zero">
+    </div>
+    
+   <div class="w3-quarter">
+      <img src="maga.png" style="width:100%" onclick="onClick(this)" alt="(Maga)">
+      <img src="proximamente.jpg" style="width:50%" onclick="onClick(this)" alt="Personaje 6">
+      <img src="scorpion.jpg" style="width:100%" onclick="onClick(this)" alt="Scorpion">
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="vaquero.png" style="width:100%" onclick="onClick(this)" alt="(Vaquero)">
+      <img src="proximamente.jpg" style="width:50%" onclick="onClick(this)" alt="Proximamente 1">
+      <img src="ryu.jpg" style="width:100%" onclick="onClick(this)" alt="Ryu">
+    </div>
+
+    <div class="w3-quarter">
+      <img src="samurai.jpg" style="width:100%" onclick="onClick(this)" alt="Samurai">
+      <img src="proximamente.jpg" style="width:50%" onclick="onClick(this)" alt="Proximamente 2">
+      <img src="ken.jpg" style="width:100%" onclick="onClick(this)" alt="Ken">
+    </div>
+  </div>
+  
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+  <!-- Weapons -->
+  <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-16" id="weapons">
+    <hr class="w3-content w3-opacity" style="max-width:1000px">
+    <h4 class="w3-content w3-center" style="max-width:600px">Armas</h4>
+    <div class="w3-row w3-grayscale-min">
+      <div class="w3-quarter">
+        <img src="tomahawk.png" style="width:100%" onclick="onClick(this)" alt="Tomahawk de Mekelele">
+      </div>
+      <div class="w3-quarter">
+        <img src="spellbook.png" style="width:100%" onclick="onClick(this)" alt="Libro de hechizos de (maga)">
+      </div>
+      <div class="w3-quarter">
+        <img src="pistola.png" style="width:100%" onclick="onClick(this)" alt="Pistola de (vaquero)">
+      </div>
+      <div class="w3-quarter">
+        <img src="katana.jpg" style="width:100%" onclick="onClick(this)" alt="Katana de (samurai)">
+      </div>
+    </div>
+  <!-- Music -->
+  <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-16" id="music">
+    <hr class="w3-opacity w3-content" style="max-width:1000px">
+    <h4 class="w3-content w3-center" style="max-width:600px">Música</h4>
+    <h4 class="w3-content w3-center" style="max-width:600px">Pillow Fights</h4>
+    <audio controls>
+      <source src="cancion_alpha.mp3" type="audio/mpeg">
+    </audio>
+    <h4 class="w3-content w3-center" style="max-width:600px">Street Fighter</h4>
+    <audio controls>
+      <source src="streetfighter.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+  <!-- Maps -->
+  <!-- About section -->
+  <hr class="w3-content w3-opacity" style="max-width:600px">
+  <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-16" id="about">
+    <h4><b>Equipo D</b></h4>
+    <img src="equipof.jpg" alt="Equipo F" class="w3-image w3-padding-32" width="600" height="650">
+    <div class="w3-content w3-justify" style="max-width:600px">
+      <h4>Equipo F</h4>
+      <p>Somos el Equipo D pero nos llamamos Equipo F. Somos unos estudiantes de la asignatura multimedia de la Universidad Rey Juan Carlos.
+      </p>
+      <p>Nuestro equipo esta formado por:
+      <p>Ivan Gutiérrez Aguilera: Dibujo.</p>
+      <p>Carlos Jiménez López: Dibujo.</p>
+      <p>Alexander Tercero Moreno: Música.</p>
+      <p>Marcos Meca Merino: Programación.</p>
+      <p>Adrián Rubio Garrido: Programación.</p>
+      <p>Miguel Carmona Garrido: Programación.</p>
+      <p>mail: equipoefed@gmail.com</p>
+      <hr class="w3-opacity">
+    </div>
+  </div>
+
+  <!-- Objetives -->
+  <div class="w3-container w3-center" id="objectives">
+    <h4>Objetivos</h4>
+      <p class="w3-wide">x€ -> Nuevo Persoje</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:10%">10%</div>
+      </div>
+      <p class="w3-wide">x€ -> Nuevo Personaje + Nuevo Mapa</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:5%">5%</div>
+      </div>
+      <p class="w3-wide">x€ -> Juego En Switch</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:1%">1%</div>
+      </div>
+      <hr class="w3-opacity">
+  </div>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+</script>
+
+
+</body>
+</html>
