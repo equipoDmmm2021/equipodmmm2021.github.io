@@ -16,13 +16,15 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
   <a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">SALIR</a> 
-  <a href="#pillowfights" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">PILLOW FIGHTS</a>
+  <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">PILLOW FIGHTS</a>
   <a href="#characters" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">PERSONAJES</a>
   <a href="#weapons" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">ARMAS</a>
-  <!--NO HECHO   <a href="#maps" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">MAPAS</a>-->
+  <a href="#maps" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">MAPAS</a>
   <a href="#music" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">MÚSICA</a>
   <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">SOBRE NOSOTROS</a> 
+  <a href="#contributions" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">CONTRIBUCIONES</a>
   <a href="#objectives" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">OBJETIVOS</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">REDES SOCIALES</a>
 </nav>
 
 <!-- Top menu on small screens -->
@@ -35,7 +37,7 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <!-- !PAGE CONTENT! -->
-<div class="w3-content w3-justify" style="max-width:1000px;margin-top:100px" id="pillowfights">
+<div class="w3-content w3-justify" style="max-width:1000px;margin-top:100px">
   <!-- Pillow Fights -->
   <img src="logo.jpeg" style="width:25%">
   <p>Pillow Fights es un juego de lucha al más puro estilo 2D.</p>
@@ -45,10 +47,10 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
       <source src="nervegear.mp4" type="video/mp4">
     </video>
   </div>
-  <hr class="w3-opacity">
+  <hr class="w3-opacity" id="characters">
 
 </div>
-<div class="w3-main w3-content" style="max-width:1600px;margin-top:83px" id="characters">
+<div class="w3-main w3-content" style="max-width:1600px;margin-top:83px">
   <!-- Characters -->
   <h4 class="w3-content w3-center" style="max-width:600px">Personajes</h4>
   <div class="w3-row w3-grayscale-min">
@@ -103,6 +105,22 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
         <img src="katana.jpg" style="width:100%" onclick="onClick(this)" alt="Katana de (samurai)">
       </div>
     </div>
+
+  <!--Maps-->
+  <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-16" id="maps">
+    <hr class="w3-content w3-opacity" style="max-width:1000px">
+    <h4 class="w3-content w3-center" style="max-width:600px">Mapas</h4>
+    <div class="w3-row w3-grayscale-min">
+      <div class="w3-half">
+        <img src="MapaMultimedia2.jpg" style="width:100%" onclick="onClick(this)" alt="Mapa 2">
+      </div>
+
+
+
+
+
+  </div>
+
   <!-- Music -->
   <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-16" id="music">
     <hr class="w3-opacity w3-content" style="max-width:1000px">
@@ -138,23 +156,127 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     </div>
   </div>
 
+
+<!-- Contributions -->
+  <div class="w3-content w3-container" id="contributions">
+    <h4 class="w3-padding-16">Contribuciones</h4>
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half w3-margin-bottom">
+        <ul class="w3-ul w3-white w3-center">
+          <li class="w3-black w3-xlarge w3-padding-32">Ladrillo</li>
+          <li class="w3-padding-16">Descuento del 50% para una clave en cualquier plataforma (PS4, XBOX ONE, STEAM)</li>
+          <li class="w3-padding-16">Libro de arte digital</li>
+          <li class="w3-padding-16">Tu nombre en los créditos finales</li>
+          <li class="w3-padding-16">Taza con el logo "Pillow Fights"</li>
+          <li class="w3-padding-16">
+            <h2>5€</h2>
+            <span class="w3-opacity">Agosto 2021</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-white w3-padding-large">Comprar</button>
+          </li>
+        </ul>
+      </div>
+        
+      <div class="w3-half w3-margin-bottom">
+        <ul class="w3-ul w3-white w3-center">
+          <li class="w3-black w3-xlarge w3-padding-32">Mochila con libros</li>
+          <li class="w3-padding-16">Ventajas anteriores + acceso a una clave del juego en cualquier plataforma el día de lanzamiento</li>
+          <li class="w3-padding-16">Banda sonora digital</li>
+          <li class="w3-padding-16">Camiseta con logo "Pillow Fights"</li>
+          <li class="w3-padding-16">Póster (66 x 96cm) de la portada del juego</li>
+          <li class="w3-padding-16">
+            <h2>10€</h2>
+            <span class="w3-opacity">Agosto 2021</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-white w3-padding-large">Comprar</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    
+    
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half">
+        <ul class="w3-ul w3-white w3-center">
+          <li class="w3-black w3-xlarge w3-padding-32">Almohada normal</li>
+          <li class="w3-padding-16">Ventajas anteriores + acceso anticipado 1 semana antes a una clave del juego en cualquier plataforma</li>
+          <li class="w3-padding-16">Póster tamaño puerta (53 x 158cm) exclusivo</li>
+          <li class="w3-padding-16">Edición estándar DVD</li>
+          <li class="w3-padding-16">Almohada con logo "Pillow Fights"</li>
+          <li class="w3-padding-16">
+            <h2>50€</h2>
+            <span class="w3-opacity">Agosto 2021</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-white w3-padding-large">Comprar</button>
+          </li>
+        </ul>
+      </div>
+        
+      <div class="w3-half">
+        <ul class="w3-ul w3-white w3-center">
+          <li class="w3-black w3-xlarge w3-padding-32">Viscoelástica</li>
+          <li class="w3-padding-16">Ventajas anteriores + acceso a la beta cerrada 1 mes antes del lanzamiento (Julio 2021)</li>
+          <li class="w3-padding-16">Edición Coleccionista en DVD + Manual físico</li>
+          <li class="w3-padding-16">Banda sonora en vinilo</li>
+          <li class="w3-padding-16">Adaptación de un personaje a tu elección</li>
+          <li class="w3-padding-16">
+            <h2>100€</h2>
+            <span class="w3-opacity">Agosto 2021</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-white w3-padding-large">Comprar</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
   <!-- Objetives -->
   <div class="w3-container w3-center" id="objectives">
+  <hr class="w3-content w3-opacity" style="max-width:1000px">
     <h4>Objetivos</h4>
-      <p class="w3-wide">x€ -> Nuevo Persoje</p>
+      <p class="w3-wide">5,000€ -> Adaptación y doblaje de todas las voces (sólo inglés) </p>
       <div class="w3-white">
-        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:10%">10%</div>
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:36%">36%</div>
       </div>
-      <p class="w3-wide">x€ -> Nuevo Personaje + Nuevo Mapa</p>
+      <p class="w3-wide">10,000€ -> Modo multijugador online (todas las plataformas)</p>
       <div class="w3-white">
-        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:5%">5%</div>
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:18%">18%</div>
       </div>
-      <p class="w3-wide">x€ -> Juego En Switch</p>
+      <p class="w3-wide">50,000€ -> Modo supervivencia por oleadas </p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:4%">4%</div>
+      </div>
+      <p class="w3-wide">100,000€ -> Juego En Switch</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:2%">2%</div>
+      </div>
+      <p class="w3-wide">150,000€ -> DLC secuela del modo campaña </p>
       <div class="w3-white">
         <div class="w3-container w3-padding-small w3-center w3-grey" style="width:1%">1%</div>
       </div>
       <hr class="w3-opacity">
   </div>
+
+<!--Contact-->
+<div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+    <div class="w3-content w3-center" style="max-width:600px">
+      <h4 class="w3-center"><b>Nuestras redes sociales</b></h4>
+      <p>Para mantenerte al día con el desarrollo síguenos en nuestras redes sociales</p>
+<a href="https://hogarconamor.com/descanso/almohadas/mejores/" target="_blank"><img src="https://image.flaticon.com/icons/png/512/87/87390.png"  style="width:42px;height:42px;"></a>
+<a href="https://hogarconamor.com/descanso/almohadas/mejores/" target="_blank"><img src="https://img.icons8.com/metro/452/twitter.png"  style="width:42px;height:42px;"></a>
+
+    </div>
+  </div>
+
   <p>ATENCIÓN: Esta página simula la campaña de microfinanciación de un videojuego ficticio (no representa un producto real). Práctica de Multimedia, 1º GDDV -Curso 20/21(Móstoles), URJC. La URJC no se hace responsable del contenido expuesto por elautor.</p>
   <p>Algunas de las imágenes y vídeos proceden de fuentes externas como las imágenes y música de Street Fighter y Mortal Kombat y de la serie Sword Art Online.</p>
 <!-- End page content -->
