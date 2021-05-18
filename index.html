@@ -3,15 +3,19 @@
 <title>Pillow Fights</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="logo.jpeg" type="image/x-icon">
+<link rel="icon" href="logo.png" type="image/x-icon">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <style>
 body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 .w3-quarter img{margin-bottom: -6px; cursor: pointer}
 .w3-quarter img:hover{opacity: 0.6; transition: 0.3s}
+body {
+  background-image: url("fondo.jpg")
+}
 </style>
-<body class="w3-dark-grey">
+
+<body>
 
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
@@ -39,11 +43,11 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <!-- !PAGE CONTENT! -->
 <!-- Pillow Fights -->
 <div class="w3-content w3-center w3-row" style="margin-top:100px">
-  <img src="logo1.png" style="width:30%">
+  <img src="logo.png" style="width:100%">
 </div>
-<div class="w3-content w3-justify" style="max-width:1000px">
+<div class="w3-content w3-justify w3-text-white" style="max-width:1000px">
   <p>Pillow Fights es un juego de lucha al más puro estilo 2D.</p>
-  <p>En un mundo en el que el odio invade a todo aquel que lo haita, una empresa de videojuegos creó una consola capaz de transportarte a un mundo en el que puedes deshacerte de ese odio. Los jugadores se desahogan luchando entre ellos con los personajes que ellos mismos imaginan. A qué esperas, adéntrate en el mundo de Pillow Fights y prepárate para la batalla más soñada.</p>
+  <p>En un mundo en el que el odio invade a todo aquel que lo habita, una empresa de videojuegos creó una consola capaz de transportarte a un mundo en el que puedes deshacerte de ese odio. Los jugadores se desahogan luchando entre ellos con los personajes que ellos mismos imaginan. A qué esperas, adéntrate en el mundo de Pillow Fights y prepárate para la batalla más soñada.</p>
   <div class="w3-content w3-center">
     <video width="640" height="480" controls>
       <source src="nervegear.mp4" type="video/mp4">
@@ -53,19 +57,19 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 
 <!-- Characters -->
 <div id="characters"></div>
-<div class="w3-main w3-content" style="max-width:1600px; margin-top:60px">
+<div class="w3-main w3-content w3-text-white" style="max-width:1600px; margin-top:60px">
   <hr class="w3-content w3-opacity" style="max-width:1000px">
   <h4 class="w3-content w3-center" style="max-width:600px; margin-top:50px; margin-bottom:30px">Personajes</h4>
-  <div class="w3-row w3-grayscale-min">
+  <div class="w3-row">
     <div class="w3-quarter">
-      <img src="mekelele.png" style="width:100%" onclick="onClick(this)" alt="Mekelele">
-      <img src="proximamente.jpg" style="width:50%" onclick="onClick(this)" alt="Personaje 5">
+      <img src="makelele.png" style="width:100%" onclick="onClick(this)" alt="Makelele">
+      <img src="forsac.png" style="width:100%" onclick="onClick(this)" alt="Forsac">
       <img src="sub-zero.jpg" style="width:100%" onclick="onClick(this)" alt="Sub-Zero">
     </div>
     
    <div class="w3-quarter">
       <img src="delphi.png" style="width:100%" onclick="onClick(this)" alt="Delphi">
-      <img src="proximamente.jpg" style="width:50%" onclick="onClick(this)" alt="Personaje 6">
+      <img src="akuno.jpg" style="width:100%" onclick="onClick(this)" alt="Akuno">
       <img src="scorpion.jpg" style="width:100%" onclick="onClick(this)" alt="Scorpion">
     </div>
     
@@ -93,12 +97,12 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 
 <!-- Weapons -->
 <div id="weapons"></div>
-<div class="w3-main w3-content" style="max-width:1600px; margin-top:60px">
+<div class="w3-main w3-content w3-text-white" style="max-width:1600px; margin-top:60px">
   <hr class="w3-content w3-opacity" style="max-width:1000px">
   <h4 class="w3-content w3-center" style="max-width:600px; margin-top:50px; margin-bottom:30px">Armas</h4>
-  <div class="w3-row w3-grayscale-min">
+  <div class="w3-row">
     <div class="w3-quarter">
-      <img src="tomahawk.png" style="width:100%" onclick="onClick(this)" alt="Tomahawk de Mekelele">
+      <img src="tomahawk.png" style="width:100%" onclick="onClick(this)" alt="Tomahawk de Makelele">
     </div>
     <div class="w3-quarter">
       <img src="spellbook.png" style="width:100%" onclick="onClick(this)" alt="Libro de hechizos de Delphi">
@@ -114,19 +118,22 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 
 <!--Maps-->
 <div id="maps"></div>
-<div class="w3-main w3-content w3-center" style="max-width:1600px; margin-top:60px">
+<div class="w3-main w3-content w3-center w3-text-white" style="max-width:1600px; margin-top:60px">
   <hr class="w3-content w3-opacity" style="max-width:1000px">
   <h4 class="w3-content w3-center" style="max-width:600px; margin-top:50px">Mapas</h4>
-  <div class="w3-row w3-grayscale-min">
+  <div class="w3-row">
     <div class="w3-half">
-      <img src="MapaMultimedia2.jpg" style="width:100%; margin-top:20px" onclick="onClick(this)" alt="Mapa 2">
+      <img src="mapa1.jpg" style="width:100%; margin-top:20px" onclick="onClick(this)" alt="Mapa 1">
+    </div>
+    <div class="w3-half">
+      <img src="mapa2.png" style="width:100%; margin-top:20px" onclick="onClick(this)" alt="Mapa 2">
     </div>
   </div>
 <div>
 
 <!-- Music -->
 <div id="music"></div>
-<div class="w3-main w3-content" style="max-width:1600px; margin-top:80px">
+<div class="w3-main w3-content w3-text-white" style="max-width:1600px; margin-top:80px">
   <hr class="w3-content w3-opacity" style="max-width:1000px; margin-bottom:90px">
   <h4 class="w3-content" style="max-width:600px">Música</h4>
   <h4 class="w3-content w3-center" style="max-width:600px; margin-top:40px">Pillow Fights</h4>
@@ -141,7 +148,7 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 
 <!-- About section -->
 <div id="about"></div>
-<div class="w3-main w3-content" style="max-width:1600px; margin-top:60px">
+<div class="w3-main w3-content w3-text-white" style="max-width:1600px; margin-top:60px">
   <hr class="w3-content w3-opacity" style="max-width:600px">
   <h4 class="w3-content" style="max-width:600px; margin-top:50px">Equipo D</h4>
   <img src="equipof.jpg" alt="Equipo F" class="w3-image w3-padding-32" width="600" height="650">
@@ -149,19 +156,19 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     <h4>Equipo F</h4>
     <p>Somos el Equipo D pero nos llamamos Equipo F. Somos unos estudiantes de la asignatura multimedia de la Universidad Rey Juan Carlos.</p>
     <p>Nuestro equipo está formado por:</p>
-    <p>Ivan Gutiérrez Aguilera: Dibujo.</p>
-    <p>Carlos Jiménez López: Dibujo.</p>
-    <p>Alexander Tercero Moreno: Música.</p>
-    <p>Marcos Meca Merino: Programación.</p>
-    <p>Adrián Rubio Garrido: Redes Sociales.</p>
-    <p>Miguel Carmona Garrido: Programación.</p>
+    <p><b>Miguel Carmona Garrido:</b> Programación y Diseño de niveles. (Real: Diseño Página Web)</p>
+    <p><b>Ivan Gutiérrez Aguilera:</b> Diseño de personajes y Guión. (Real: Diseño de personajes y Guión)</p>
+    <p><b>Carlos Jiménez López:</b> Diseño de personajes y Concept art.(Real: Diseño de personajes y de escenarios)</p>
+    <p><b>Marcos Meca Merino:</b> Programación y Diseño de niveles. (Real: Diseño Página Web)</p>
+    <p><b>Adrián Rubio Garrido:</b> Diseño de interfaces. (Real: Redes Sociales)</p>
+    <p><b>Alexander Tercero Moreno:</b> Música y Guión. (Real: Música)</p>
     <p>e-mail: equipoefed@gmail.com</p>
   </div>
 </div>
 
 <!-- Contributions -->
 <div id="contributions"></div>
-<div class="w3-main w3-content" style="max-width:1000px; margin-top:60px">
+<div class="w3-main w3-content w3-text-white" style="max-width:1000px; margin-top:60px">
   <hr class="w3-content w3-opacity" style="max-width:600px">
   <h4 class="w3-content w3-center" style="max-width:600px; margin-top:60px; margin-bottom:30px">Contribuciones</h4>
   <div class="w3-row-padding" style="margin:0 -16px">
@@ -190,7 +197,7 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
         <li class="w3-padding-16">Camiseta con logo "Pillow Fights"</li>
         <li class="w3-padding-16">Póster (66 x 96cm) de la portada del juego</li>
         <li class="w3-padding-16">
-          <h2>10€</h2>
+          <h2>15€</h2>
           <span class="w3-opacity">Agosto 2021</span>
         </li>
         <li class="w3-light-grey w3-padding-24">
@@ -239,10 +246,10 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 
 <!-- Objetives -->
 <div id="objectives"></div>
-<div class="w3-main w3-content" style="max-width:1600px; margin-top:60px">
+<div class="w3-main w3-content w3-text-white" style="max-width:1600px; margin-top:60px">
 <hr class="w3-content w3-opacity" style="max-width:1000px">
 <h4 class="w3-content w3-center" style="max-width:600px; margin-top:50px; margin-bottom:30px">Objetivos</h4>
-  <p class="w3-wide">5,000€ -> Adaptación y doblaje de todas las voces (sólo inglés) </p>
+  <p class="w3-wide">5,000€ -> Adaptación y doblaje de todas las voces (sólo inglés)</p>
   <div class="w3-white">
     <div class="w3-container w3-padding-small w3-center w3-grey" style="width:36%">36%</div>
   </div>
@@ -250,7 +257,7 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   <div class="w3-white">
     <div class="w3-container w3-padding-small w3-center w3-grey" style="width:18%">18%</div>
   </div>
-  <p class="w3-wide">50,000€ -> Modo supervivencia por oleadas </p>
+  <p class="w3-wide">50,000€ -> Modo supervivencia por oleadas</p>
   <div class="w3-white">
     <div class="w3-container w3-padding-small w3-center w3-grey" style="width:4%">4%</div>
   </div>
@@ -258,7 +265,7 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   <div class="w3-white">
     <div class="w3-container w3-padding-small w3-center w3-grey" style="width:2%">2%</div>
   </div>
-  <p class="w3-wide">150,000€ -> DLC secuela del modo campaña </p>
+  <p class="w3-wide">150,000€ -> DLC secuela del modo campaña</p>
   <div class="w3-white">
     <div class="w3-container w3-padding-small w3-center w3-grey" style="width:1%">1%</div>
   </div>
