@@ -11,7 +11,9 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 .w3-quarter img{margin-bottom: -6px; cursor: pointer}
 .w3-quarter img:hover{opacity: 0.6; transition: 0.3s}
 body {
-  background-image: url("fondo.jpg")
+  background-image: url("fondo.jpg");
+  background-size: 1920px 1080px;
+  background-attachment: fixed;
 }
 </style>
 
@@ -28,7 +30,9 @@ body {
   <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">SOBRE NOSOTROS</a> 
   <a href="#contributions" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">CONTRIBUCIONES</a>
   <a href="#objectives" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">OBJETIVOS</a>
+  <a href="#comentaries" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">COMENTARIOS</a>
   <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">REDES SOCIALES</a>
+    <a href="#fq" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">PREGUNTAS FRECUENTES</a>
 </nav>
 
 <!-- Top menu on small screens -->
@@ -57,32 +61,28 @@ body {
 
 <!-- Characters -->
 <div id="characters"></div>
-<div class="w3-main w3-content w3-text-white" style="max-width:1600px; margin-top:60px">
-  <hr class="w3-content w3-opacity" style="max-width:1000px">
-  <h4 class="w3-content w3-center" style="max-width:600px; margin-top:50px; margin-bottom:30px">Personajes</h4>
+<div class="w3-main w3-content w3-text-yellow" style="max-width:1600px; margin-top:60px">
+  <hr class="w3-content" style="max-width:1000px;height:3px;color:white;background-color:white">
+  <h2 class="w3-content w3-center" style="max-width:600px; margin-top:50px; margin-bottom:30px">Personajes</h2>
   <div class="w3-row">
     <div class="w3-quarter">
       <img src="makelele.png" style="width:100%" onclick="onClick(this)" alt="Makelele">
       <img src="forsac.png" style="width:100%" onclick="onClick(this)" alt="Forsac">
-      <img src="sub-zero.jpg" style="width:100%" onclick="onClick(this)" alt="Sub-Zero">
     </div>
     
    <div class="w3-quarter">
       <img src="delphi.png" style="width:100%" onclick="onClick(this)" alt="Delphi">
       <img src="akuno.jpg" style="width:100%" onclick="onClick(this)" alt="Akuno">
-      <img src="scorpion.jpg" style="width:100%" onclick="onClick(this)" alt="Scorpion">
     </div>
     
     <div class="w3-quarter">
       <img src="valador.png" style="width:100%" onclick="onClick(this)" alt="Valador">
-      <img src="proximamente.jpg" style="width:50%" onclick="onClick(this)" alt="Proximamente 1">
-      <img src="ryu.jpg" style="width:100%" onclick="onClick(this)" alt="Ryu">
+      <img src="proximamente.png" style="width:100%" onclick="onClick(this)" alt="Proximamente 1">
     </div>
 
     <div class="w3-quarter">
       <img src="rengoku.jpg" style="width:100%" onclick="onClick(this)" alt="Rengoku">
-      <img src="proximamente.jpg" style="width:50%" onclick="onClick(this)" alt="Proximamente 2">
-      <img src="kenmasters.jpg" style="width:100%" onclick="onClick(this)" alt="Ken Masters">
+      <img src="proximamente.png" style="width:100%" onclick="onClick(this)" alt="Proximamente 2">
     </div>
   </div>
   <!-- Modal for full size images on click-->
@@ -97,9 +97,9 @@ body {
 
 <!-- Weapons -->
 <div id="weapons"></div>
-<div class="w3-main w3-content w3-text-white" style="max-width:1600px; margin-top:60px">
-  <hr class="w3-content w3-opacity" style="max-width:1000px">
-  <h4 class="w3-content w3-center" style="max-width:600px; margin-top:50px; margin-bottom:30px">Armas</h4>
+<div class="w3-main w3-content w3-text-yellow" style="max-width:1600px; margin-top:60px">
+  <hr class="w3-content" style="max-width:1000px;height:3px;color:white;background-color:white">
+  <h2 class="w3-content w3-center" style="max-width:600px; margin-top:50px; margin-bottom:30px">Armas</h2>
   <div class="w3-row">
     <div class="w3-quarter">
       <img src="tomahawk.png" style="width:100%" onclick="onClick(this)" alt="Tomahawk de Makelele">
@@ -118,27 +118,29 @@ body {
 
 <!--Maps-->
 <div id="maps"></div>
-<div class="w3-main w3-content w3-center w3-text-white" style="max-width:1600px; margin-top:60px">
-  <hr class="w3-content w3-opacity" style="max-width:1000px">
-  <h4 class="w3-content w3-center" style="max-width:600px; margin-top:50px">Mapas</h4>
+<div class="w3-main w3-content w3-center w3-text-yellow" style="max-width:1600px; margin-top:60px">
+  <hr class="w3-content" style="max-width:1000px;height:3px;color:white;background-color:white">
+  <h2 class="w3-content w3-center" style="max-width:600px; margin-top:50px">Mapas</h2>
   <div class="w3-row">
     <div class="w3-half">
-      <img src="mapa1.jpg" style="width:100%; margin-top:20px" onclick="onClick(this)" alt="Mapa 1">
+      <img src="escenario_western.png" style="width:100%; margin-top:20px" onclick="onClick(this)" alt="Mapa Viejo Oeste">
     </div>
     <div class="w3-half">
-      <img src="mapa2.png" style="width:100%; margin-top:20px" onclick="onClick(this)" alt="Mapa 2">
+      <img src="escenario_samurai.png" style="width:100%; margin-top:20px" onclick="onClick(this)" alt="Mapa Tejados Japón">
     </div>
   </div>
-<div>
+</div>
 
 <!-- Music -->
 <div id="music"></div>
-<div class="w3-main w3-content w3-text-white" style="max-width:1600px; margin-top:80px">
-  <hr class="w3-content w3-opacity" style="max-width:1000px; margin-bottom:90px">
-  <h4 class="w3-content" style="max-width:600px">Música</h4>
+<div class="w3-main w3-content w3-center w3-text-yellow" style="max-width:1600px; margin-top:80px">
+  <hr class="w3-content" style="max-width:1000px;height:3px;color:white;background-color:white">
+  <h2 class="w3-content" style="max-width:600px">Música</h2>
+</div>
+<div class="w3-main w3-content w3-center w3-text-white" style="max-width:1600px">
   <h4 class="w3-content w3-center" style="max-width:600px; margin-top:40px">Pillow Fights</h4>
   <audio controls>
-    <source src="cancion_alpha.mp3" type="audio/mpeg">
+    <source src="akuno's_theme.mp3" type="audio/mpeg">
   </audio>
   <h4 class="w3-content w3-center" style="max-width:600px">Street Fighter</h4>
   <audio controls>
@@ -148,9 +150,11 @@ body {
 
 <!-- About section -->
 <div id="about"></div>
-<div class="w3-main w3-content w3-text-white" style="max-width:1600px; margin-top:60px">
-  <hr class="w3-content w3-opacity" style="max-width:600px">
-  <h4 class="w3-content" style="max-width:600px; margin-top:50px">Equipo D</h4>
+<div class="w3-main w3-content w3-center w3-text-yellow" style="max-width:1600px; margin-top:60px">
+  <hr class="w3-content" style="max-width:600px;height:3px;color:white;background-color:white">
+  <h2 class="w3-content" style="max-width:600px; margin-top:50px">Equipo D</h2>
+</div>
+<div class="w3-main w3-content w3-center w3-text-white" style="max-width:1600px">
   <img src="equipof.jpg" alt="Equipo F" class="w3-image w3-padding-32" width="600" height="650">
   <div class="w3-content w3-justify" style="max-width:600px">
     <h4>Equipo F</h4>
@@ -168,12 +172,12 @@ body {
 
 <!-- Contributions -->
 <div id="contributions"></div>
-<div class="w3-main w3-content w3-text-white" style="max-width:1000px; margin-top:60px">
-  <hr class="w3-content w3-opacity" style="max-width:600px">
-  <h4 class="w3-content w3-center" style="max-width:600px; margin-top:60px; margin-bottom:30px">Contribuciones</h4>
+<div class="w3-main w3-content w3-text-yellow" style="max-width:1000px; margin-top:60px">
+  <hr class="w3-content" style="max-width:600px;height:3px;color:white;background-color:white">
+  <h2 class="w3-content w3-center" style="max-width:600px; margin-top:60px; margin-bottom:30px">Contribuciones</h2>
   <div class="w3-row-padding" style="margin:0 -16px">
     <div class="w3-half w3-margin-bottom">
-      <ul class="w3-ul w3-white w3-center">
+      <ul class="w3-ul w3-center" style="background: #c74f29;color:white">
         <li class="w3-black w3-xlarge w3-padding-32">Ladrillo</li>
         <li class="w3-padding-16">Descuento del 50% para una clave en cualquier plataforma (PS4, XBOX ONE, STEAM)</li>
         <li class="w3-padding-16">Libro de arte digital</li>
@@ -183,14 +187,14 @@ body {
           <h2>5€</h2>
           <span class="w3-opacity">Agosto 2021</span>
         </li>
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-white w3-padding-large">Comprar</button>
+        <li class="w3-padding-24">
+          <button class="w3-button w3-orange w3-padding-large">Comprar</button>
         </li>
       </ul>
     </div>
 
     <div class="w3-half w3-margin-bottom">
-      <ul class="w3-ul w3-white w3-center">
+      <ul class="w3-ul w3-center" style="background: #2d71a7;color:white;">
         <li class="w3-black w3-xlarge w3-padding-32">Mochila con libros</li>
         <li class="w3-padding-16">Ventajas anteriores + acceso a una clave del juego en cualquier plataforma el día de lanzamiento</li>
         <li class="w3-padding-16">Banda sonora digital</li>
@@ -200,16 +204,15 @@ body {
           <h2>15€</h2>
           <span class="w3-opacity">Agosto 2021</span>
         </li>
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-white w3-padding-large">Comprar</button>
+        <li class="w3-padding-24">
+          <button class="w3-button w3-blue w3-padding-large">Comprar</button>
         </li>
       </ul>
     </div>
   </div>
-
   <div class="w3-row-padding" style="margin:0 -16px">
     <div class="w3-half">
-      <ul class="w3-ul w3-white w3-center">
+      <ul class="w3-ul w3-center" style="background: #af45af;color:white">
         <li class="w3-black w3-xlarge w3-padding-32">Almohada normal</li>
         <li class="w3-padding-16">Ventajas anteriores + acceso anticipado 1 semana antes a una clave del juego en cualquier plataforma</li>
         <li class="w3-padding-16">Póster tamaño puerta (53 x 158cm) exclusivo</li>
@@ -219,14 +222,14 @@ body {
           <h2>50€</h2>
           <span class="w3-opacity">Agosto 2021</span>
         </li>
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-white w3-padding-large">Comprar</button>
+        <li class="w3-padding-24">
+          <button class="w3-button w3-purple w3-padding-large">Comprar</button>
         </li>
       </ul>
     </div>
 
     <div class="w3-half">
-      <ul class="w3-ul w3-white w3-center">
+      <ul class="w3-ul w3-center" style="background: #7d7d2c;color:white;">
         <li class="w3-black w3-xlarge w3-padding-32">Viscoelástica</li>
         <li class="w3-padding-16">Ventajas anteriores + acceso a la beta cerrada 1 mes antes del lanzamiento (Julio 2021)</li>
         <li class="w3-padding-16">Edición Coleccionista en DVD + Manual físico</li>
@@ -236,8 +239,8 @@ body {
           <h2>100€</h2>
           <span class="w3-opacity">Agosto 2021</span>
         </li>
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-white w3-padding-large">Comprar</button>
+        <li class="w3-padding-24">
+          <button class="w3-button w3-yellow w3-padding-large">Comprar</button>
         </li>
       </ul>
     </div>
@@ -246,46 +249,66 @@ body {
 
 <!-- Objetives -->
 <div id="objectives"></div>
-<div class="w3-main w3-content w3-text-white" style="max-width:1600px; margin-top:60px">
-<hr class="w3-content w3-opacity" style="max-width:1000px">
-<h4 class="w3-content w3-center" style="max-width:600px; margin-top:50px; margin-bottom:30px">Objetivos</h4>
-  <p class="w3-wide">5,000€ -> Adaptación y doblaje de todas las voces (sólo inglés)</p>
-  <div class="w3-white">
-    <div class="w3-container w3-padding-small w3-center w3-grey" style="width:36%">36%</div>
-  </div>
-  <p class="w3-wide">10,000€ -> Modo multijugador online (todas las plataformas)</p>
-  <div class="w3-white">
-    <div class="w3-container w3-padding-small w3-center w3-grey" style="width:18%">18%</div>
-  </div>
-  <p class="w3-wide">50,000€ -> Modo supervivencia por oleadas</p>
-  <div class="w3-white">
-    <div class="w3-container w3-padding-small w3-center w3-grey" style="width:4%">4%</div>
-  </div>
-  <p class="w3-wide">100,000€ -> Juego En Switch</p>
-  <div class="w3-white">
-    <div class="w3-container w3-padding-small w3-center w3-grey" style="width:2%">2%</div>
-  </div>
-  <p class="w3-wide">150,000€ -> DLC secuela del modo campaña</p>
-  <div class="w3-white">
-    <div class="w3-container w3-padding-small w3-center w3-grey" style="width:1%">1%</div>
-  </div>
+<div class="w3-main w3-content w3-text-yellow" style="max-width:1600px; margin-top:60px">
+  <hr class="w3-content" style="max-width:1000px;height:3px;color:white;background-color:white">
+  <h2 class="w3-content w3-center" style="max-width:600px; margin-top:50px; margin-bottom:30px">Objetivos</h2>
 </div>
-
+<div class="w3-main w3-content w3-text-white w3-center" style="max-width:1600px">
+  <p class="w3-wide">5,000€ -> Adaptación y doblaje de todas las voces (sólo inglés). DESBLOQUEADO</p>
+  <div class="w3-white">
+    <div class="w3-container w3-padding-small w3-center w3-blue" style="width:100%">100%</div>
+  </div>
+  <p class="w3-wide">10,000€ -> Modo multijugador online (todas las plataformas). DESBLOQUEADO</p>
+  <div class="w3-white">
+    <div class="w3-container w3-padding-small w3-center w3-blue" style="width:100%">100%</div>
+  </div>
+  <p class="w3-wide">50,000€ -> Modo supervivencia por oleadas. BLOQUEADO</p>
+  <div class="w3-white">
+    <div class="w3-container w3-padding-small w3-center w3-blue" style="width:36%">36%</div>
+  </div>
+  <p class="w3-wide">100,000€ -> Juego En Switch. BLOQUEADO</p>
+  <div class="w3-white">
+    <div class="w3-container w3-padding-small w3-center w3-blue" style="width:18%">18%</div>
+  </div>
+  <p class="w3-wide">150,000€ -> DLC secuela del modo campaña. BLOQUEADO</p>
+  <div class="w3-white">
+    <div class="w3-container w3-padding-small w3-center w3-blue" style="width:12%">12%</div>
+  </div>
+  <p class="w3-wide">175,000€ -> ??? BLOQUEADO</p>
+    <div class="w3-white">
+      <div class="w3-container w3-padding-small w3-center w3-blue" style="width:10%">10%</div>
+    </div>
+</div>
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    this.page.url = https://equipodmmm2021.github.io/index.html;
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://https-equipodmmm2021-github-io.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript%22%3Ecomments powered by Disqus.</a></noscript>
 <!--Contact-->
 <div id="contact"></div>
 <div class="w3-container w3-light-grey" style="margin-top:60px">
   <div class="w3-content w3-center" style="max-width:600px">
-    <h4 class="w3-center"><b>Nuestras redes sociales</b></h4>
+    <h2 class="w3-center"><b>Nuestras redes sociales</b></h2>
     <p>Para mantenerte al día con el desarrollo síguenos en nuestras redes sociales</p>
-    <a href="https://instagram.com/pillowf1ght_/"><img src="instagram.png" target="_blank" style="width:42px;height:42px;"></a>
-    <a href="https://twitter.com/pillowf1ght_"><img src="twitter.png" target="_blank" style="width:42px;height:42px;"></a>
-    <a href="https://tiktok.com/@pillowf1ght_?lang=es"><img src="tiktok.png" target="_blank" style="width:42px;height:42px;"></a>
+    <a href="https://instagram.com/pillowf1ght_/" target="_blank"><img src="instagram.png" style="width:42px;height:42px;"></a>
+    <a href="https://twitter.com/pillowf1ght_" target="_blank"><img src="twitter.png" target="_blank" style="width:42px;height:42px;"></a>
+    <a href="https://tiktok.com/@pillowf1ght_?lang=es" target="_blank"><img src="tiktok.png" target="_blank" style="width:42px;height:42px;"></a>
     <p> </p>
   </div>
 </div>
 
-<p>ATENCIÓN: Esta página simula la campaña de microfinanciación de un videojuego ficticio (no representa un producto real). Práctica de Multimedia, 1º GDDV -Curso 20/21(Móstoles), URJC. La URJC no se hace responsable del contenido expuesto por el autor.</p>
-<p>Algunas de las imágenes y vídeos proceden de fuentes externas como las imágenes y música de Street Fighter y Mortal Kombat y de la serie Sword Art Online.</p>
+<p class="w3-center" style="color:white">ATENCIÓN: Esta página simula la campaña de microfinanciación de un videojuego ficticio (no representa un producto real). Práctica de Multimedia, 1º GDDV -Curso 20/21(Móstoles), URJC. La URJC no se hace responsable del contenido expuesto por el autor.</p>
+<p class="w3-center" style="color:white">Algunas de las imágenes y vídeos proceden de fuentes externas como las imágenes y música de Street Fighter y Mortal Kombat y de la serie Sword Art Online.</p>
 <!-- End page content -->
 
 <script>
