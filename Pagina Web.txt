@@ -1,5 +1,107 @@
 <!DOCTYPE html>
 <html lang="es">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+</head>
 <title>Pillow Fights</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,7 +131,7 @@ body {
   <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">SOBRE NOSOTROS</a> 
   <a href="#contributions" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">CONTRIBUCIONES</a>
   <a href="#objectives" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">OBJETIVOS</a>
-  <a href="#comentaries" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">COMENTARIOS</a>
+  <a href="#disqus_thread" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">COMENTARIOS</a>
   <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">REDES SOCIALES</a>
     <a href="#fq" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">PREGUNTAS FRECUENTES</a>
 </nav>
@@ -53,7 +155,7 @@ body {
   <p>En un mundo en el que el odio invade a todo aquel que lo habita, una empresa de videojuegos creó una consola capaz de transportarte a un mundo en el que puedes deshacerte de ese odio. Los jugadores se desahogan luchando entre ellos con los personajes que ellos mismos imaginan. A qué esperas, adéntrate en el mundo de Pillow Fights y prepárate para la batalla más soñada.</p>
   <div class="w3-content w3-center">
     <video width="640" height="480" controls>
-      <source src="nervegear.mp4" type="video/mp4">
+      <source src="trailer.mp4" type="video/mp4">
     </video>
   </div>
 </div>
@@ -76,12 +178,12 @@ body {
     
     <div class="w3-quarter">
       <img src="valador.png" style="width:100%" onclick="onClick(this)" alt="Valador">
-      <img src="proximamente.png" style="width:100%" onclick="onClick(this)" alt="Proximamente 1">
+      <img src="proximamente1.png" style="width:100%" onclick="onClick(this)" alt="Proximamente 1">
     </div>
 
     <div class="w3-quarter">
       <img src="rengoku.png" style="width:100%" onclick="onClick(this)" alt="Rengoku">
-      <img src="proximamente.png" style="width:100%" onclick="onClick(this)" alt="Proximamente 2">
+      <img src="proximamente2.png" style="width:100%" onclick="onClick(this)" alt="Proximamente 2">
     </div>
   </div>
   <!-- Modal for full size images on click-->
@@ -122,14 +224,67 @@ body {
 <div class="w3-main w3-content w3-center w3-text-yellow" style="max-width:1600px; margin-top:60px">
   <hr class="w3-content" style="max-width:1000px;height:3px;color:white;background-color:white">
   <h2 class="w3-content w3-center" style="max-width:600px; margin-top:50px">Mapas</h2>
-  <div class="w3-row">
-    <div class="w3-half">
-      <img src="escenario_western.png" style="width:100%; margin-top:20px" onclick="onClick(this)" alt="Mapa Viejo Oeste">
-    </div>
-    <div class="w3-half">
-      <img src="escenario_samurai.png" style="width:100%; margin-top:20px" onclick="onClick(this)" alt="Mapa Tejados Japón">
-    </div>
+</div>
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="escenario_western.png" style="width:100%">
+    <div class="text">Mapa Viejo Oeste</div>
   </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="escenario_samurai.png" style="width:100%">
+    <div class="text">Mapa Tejados Japón</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="escenario_akuno" style="width:100%">
+    <div class="text">Mapa Akuno</div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
 </div>
 
 <!-- Music -->
@@ -159,7 +314,7 @@ body {
   <img src="equipof.jpg" alt="Equipo F" class="w3-image w3-padding-32" width="600" height="650">
   <div class="w3-content w3-justify" style="max-width:600px">
     <h4>Equipo F</h4>
-    <p>Somos el Equipo D pero nos llamamos Equipo F. Somos unos estudiantes de la asignatura multimedia de la Universidad Rey Juan Carlos.</p>
+    <p>Somos el Equipo desarrollador de Pillow Fights, unos estudiantes de la asignatura multimedia de la Universidad Rey Juan Carlos.</p>
     <p>Nuestro equipo está formado por:</p>
     <p><b>Miguel Carmona Garrido:</b> Programación y Diseño de niveles. (Real: Diseño Página Web)</p>
     <p><b>Ivan Gutiérrez Aguilera:</b> Diseño de personajes y Guión. (Real: Diseño de personajes y Guión)</p>
@@ -280,21 +435,51 @@ body {
       <div class="w3-container w3-padding-small w3-center w3-blue" style="width:10%">10%</div>
     </div>
 </div>
-<div id="disqus_thread"></div>
+
+<!--Frequent Questions-->
+<div id="fq"></div>
+<div class="w3-main w3-content w3-text-yellow" style="max-width:1600px; margin-top:60px">
+  <hr class="w3-content" style="max-width:1000px;height:3px;color:white;background-color:white">
+  <h2 class="w3-content w3-center" style="max-width:600px; margin-top:50px; margin-bottom:30px">Preguntas Frecuentes</h2>
+</div>
+<div class="w3-main w3-content w3-text-white w3-justify" style="max-width:1600px">
+  <ul>
+    <li><h4>¿El juego tendrá DLCs?</h4></li>
+    <ul>
+      <h4>- Si se logra el objetivo establecido sacaremos un DLC unos meses después de sacar el juego que expandirá la historia de los personajes.</h4>
+    </ul>
+    <li><h4>¿Se añadirán nuevos personajes?</h4></li>
+    <ul>
+      <h4>- Tras la salida del juego se irán añadiendo cada cierto tiempo nuevos personajes?</h4>
+    </ul>
+    <li><h4>Pregunta 3</h4></li>
+    <ul>
+      <h4>- Respuesta 3</h4>
+    </ul>
+  </ul>
+</div>
+
+<!--Comments-->
+<div id="disqus_thread" style="padding: 20px;"></div>
 <script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    
     var disqus_config = function () {
-    this.page.url = https://equipodmmm2021.github.io/index.html;
-    this.page.identifier = https://equipodmmm2021.github.io/index.html;
+    this.page.url = 'https://equipodmmm2021.github.io/index.html';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'https://equipodmmm2021.github.io/index.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
-	
+    
     (function() { // DON'T EDIT BELOW THIS LINE
     var d = document, s = d.createElement('script');
-    s.src = 'https://https-equipodmmm2021-github-io.disqus.com/embed.js';
+    s.src = 'https://pillowfights.disqus.com/embed.js';
     s.setAttribute('data-timestamp', +new Date());
     (d.head || d.body).appendChild(s);
     })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript%22%3Ecomments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
 <!--Contact-->
 <div id="contact"></div>
 <div class="w3-container w3-light-grey" style="margin-top:60px">
@@ -302,8 +487,9 @@ body {
     <h2 class="w3-center"><b>Nuestras redes sociales</b></h2>
     <p>Para mantenerte al día con el desarrollo síguenos en nuestras redes sociales</p>
     <a href="https://instagram.com/pillowf1ght_/" target="_blank"><img src="instagram.png" style="width:42px;height:42px;"></a>
-    <a href="https://twitter.com/pillowf1ght_" target="_blank"><img src="twitter.png" target="_blank" style="width:42px;height:42px;"></a>
-    <a href="https://tiktok.com/@pillowf1ght_?lang=es" target="_blank"><img src="tiktok.png" target="_blank" style="width:42px;height:42px;"></a>
+    <a href="https://twitter.com/pillowf1ght_" target="_blank"><img src="twitter.png" style="width:42px;height:42px;"></a>
+    <a href="https://tiktok.com/@pillowf1ght_?lang=es" target="_blank"><img src="tiktok.png" style="width:42px;height:42px;"></a>
+    <a href="https://tiktok.com/@pillowf1ght_?lang=es" target="_blank"><img src="youtube.png" style="width:42px;height:42px;"></a>
     <p> </p>
   </div>
 </div>
