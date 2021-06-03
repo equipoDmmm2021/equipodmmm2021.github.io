@@ -495,6 +495,16 @@ function showSlides(n) {
   <div class="panel">
     <p>Sí, aunque de momento esta función está solo disponible localmente. En caso de que se alcance el objetivo se desarrollará un modo multijugador online.</p>
   </div>
+
+  <button class="accordion">¿Cuándo se recibirán las ventajas físicas (almohada, edición DVD, manual...)?</button>
+  <div class="panel">
+    <p>Un día antes del lanzamiento del videojuego, se enviarán todas las recompensas físicas para que puedan llegar el día de salida.</p>
+  </div>
+
+  <button class="accordion">¿Tenéis pensado continuar la saga?</button>
+  <div class="panel">
+    <p>De momento estamos centrados en dar lo mejor de Pillow Fights en este videojuego. Una vez consideremos que su vida útil ha terminado, nos plantearemos continuar con otros videojuegos en función del grado de satisfacción de los jugadores y nuestro.</p>
+  </div>
 </div>
 
 <script>
