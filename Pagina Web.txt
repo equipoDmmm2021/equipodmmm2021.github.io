@@ -101,19 +101,49 @@ img {vertical-align: middle;}
   .prev, .next,.text {font-size: 11px}
 }
 </style>
+
+<style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+</style>
+
 </head>
+
 <title>Pillow Fights</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="logo.png" type="image/x-icon">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="w3.css">
+
 <style>
 body,h1,h2,h3,h4,h5 {font-family: Papyrus,fantasy}
 .w3-quarter img{margin-bottom: -6px; cursor: pointer}
 .w3-quarter img:hover{opacity: 0.6; transition: 0.3s}
 body {
   background-image: url("fondo.jpg");
-  background-size: 1920px 1080px;
+  background-repeat: no-repeat;
+  background-size:100%;
   background-attachment: fixed;
 }
 </style>
@@ -152,7 +182,8 @@ body {
 </div>
 <div class="w3-content w3-justify w3-text-white" style="max-width:1000px">
   <p>Pillow Fights es un juego de lucha al más puro estilo 2D.</p>
-  <p>En un mundo en el que el odio invade a todo aquel que lo habita, una empresa de videojuegos creó una consola capaz de transportarte a un mundo en el que puedes deshacerte de ese odio. Los jugadores se desahogan luchando entre ellos con los personajes que ellos mismos imaginan. A qué esperas, adéntrate en el mundo de Pillow Fights y prepárate para la batalla más soñada.</p>
+  <p>En un mundo en el que vivir puede resultar más duro que la propia muerte, algunas personas idearon una respuesta para combatir la misma realidad. Gracias a la evolución de el raciocinio humano esas personas se podían conectar mediante los sueños, de esta manera crearon un sistema de lucha el cual dependía del personaje que imaginaran, todo esta basado en sus sueños.
+</p>
   <div class="w3-content w3-center">
     <video width="640" height="480" controls>
       <source src="trailer.mp4" type="video/mp4">
@@ -164,7 +195,7 @@ body {
 <div id="characters"></div>
 <div class="w3-main w3-content w3-text-yellow" style="max-width:1600px; margin-top:60px">
   <hr class="w3-content" style="max-width:1000px;height:3px;color:white;background-color:white">
-  <h2 class="w3-content w3-center" style="max-width:600px; margin-top:50px; margin-bottom:30px">Personajes</h2>
+  <h1 class="w3-content w3-center" style="max-width:600px; margin-top:50px; margin-bottom:30px">Personajes</h1>
   <div class="w3-row">
     <div class="w3-quarter">
       <img src="makelele.png" style="width:100%" onclick="onClick(this)" alt="Makelele">
@@ -200,7 +231,7 @@ body {
 <div id="weapons"></div>
 <div class="w3-main w3-content w3-text-yellow" style="max-width:1600px; margin-top:60px">
   <hr class="w3-content" style="max-width:1000px;height:3px;color:white;background-color:white">
-  <h2 class="w3-content w3-center" style="max-width:600px; margin-top:50px; margin-bottom:30px">Armas</h2>
+  <h1 class="w3-content w3-center" style="max-width:600px; margin-top:50px; margin-bottom:30px">Armas</h1>
   <div class="w3-row">
     <div class="w3-quarter">
       <img src="tomahawk.png" style="width:100%" onclick="onClick(this)" alt="Tomahawk de Makelele">
@@ -223,26 +254,32 @@ body {
 <div id="maps"></div>
 <div class="w3-main w3-content w3-center w3-text-yellow" style="max-width:1600px; margin-top:60px">
   <hr class="w3-content" style="max-width:1000px;height:3px;color:white;background-color:white">
-  <h2 class="w3-content w3-center" style="max-width:600px; margin-top:50px">Mapas</h2>
+  <h1 class="w3-content w3-center" style="max-width:600px; margin-top:50px">Mapas</h1>
 </div>
 <div class="slideshow-container">
 
   <div class="mySlides fade">
-    <div class="numbertext">1 / 3</div>
+    <div class="numbertext">1 / 4</div>
     <img src="escenario_western.png" style="width:100%">
     <div class="text">Mapa Viejo Oeste</div>
   </div>
 
   <div class="mySlides fade">
-    <div class="numbertext">2 / 3</div>
+    <div class="numbertext">2 / 4</div>
     <img src="escenario_samurai.png" style="width:100%">
     <div class="text">Mapa Tejados Japón</div>
   </div>
 
   <div class="mySlides fade">
-    <div class="numbertext">3 / 3</div>
+    <div class="numbertext">3 / 4</div>
     <img src="escenario_akuno" style="width:100%">
     <div class="text">Mapa Akuno</div>
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 4</div>
+    <img src="escenario_jungla" style="width:100%">
+    <div class="text">Mapa Jungla</div>
   </div>
 
   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -291,7 +328,7 @@ function showSlides(n) {
 <div id="music"></div>
 <div class="w3-main w3-content w3-center w3-text-yellow" style="max-width:1600px; margin-top:80px">
   <hr class="w3-content" style="max-width:1000px;height:3px;color:white;background-color:white">
-  <h2 class="w3-content" style="max-width:600px">Música</h2>
+  <h1 class="w3-content" style="max-width:600px">Música</h1>
 </div>
 <div class="w3-main w3-content w3-center w3-text-white" style="max-width:1600px">
   <h4 class="w3-content w3-center" style="max-width:600px; margin-top:40px">Akuno's Theme</h4>
@@ -308,7 +345,7 @@ function showSlides(n) {
 <div id="about"></div>
 <div class="w3-main w3-content w3-center w3-text-yellow" style="max-width:1600px; margin-top:60px">
   <hr class="w3-content" style="max-width:600px;height:3px;color:white;background-color:white">
-  <h2 class="w3-content" style="max-width:600px; margin-top:50px">Equipo D</h2>
+  <h1 class="w3-content" style="max-width:600px; margin-top:50px">Equipo D</h1>
 </div>
 <div class="w3-main w3-content w3-center w3-text-white" style="max-width:1600px">
   <img src="equipof.jpg" alt="Equipo F" class="w3-image w3-padding-32" width="600" height="650">
@@ -316,12 +353,12 @@ function showSlides(n) {
     <h4>Equipo F</h4>
     <p>Somos el Equipo desarrollador de Pillow Fights, unos estudiantes de la asignatura multimedia de la Universidad Rey Juan Carlos.</p>
     <p>Nuestro equipo está formado por:</p>
-    <p><b>Miguel Carmona Garrido:</b> Programación y Diseño de niveles. (Real: Diseño Página Web)</p>
-    <p><b>Ivan Gutiérrez Aguilera:</b> Diseño de personajes y Guión. (Real: Diseño de personajes y Guión)</p>
-    <p><b>Carlos Jiménez López:</b> Diseño de personajes y Concept art.(Real: Diseño de personajes y de escenarios)</p>
-    <p><b>Marcos Meca Merino:</b> Programación y Diseño de niveles. (Real: Diseño Página Web)</p>
-    <p><b>Adrián Rubio Garrido:</b> Diseño de interfaces. (Real: Redes Sociales)</p>
-    <p><b>Alexander Tercero Moreno:</b> Música y Guión. (Real: Música)</p>
+    <p><b>Miguel Carmona Garrido:</b> Programación y Diseño de niveles. (Real: Diseño Página Web y Edición de Vídeo.)</p>
+    <p><b>Ivan Gutiérrez Aguilera:</b> Diseño de personajes y Guión. (Real: Diseño de personajes y Guión.)</p>
+    <p><b>Carlos Jiménez López:</b> Diseño de personajes y Concept art.(Real: Diseño de personajes, Escenarios y Edición de Vídeo.)</p>
+    <p><b>Marcos Meca Merino:</b> Programación y Diseño de niveles. (Real: Diseño Página Web.)</p>
+    <p><b>Adrián Rubio Garrido:</b> Diseño de interfaces. (Real: Redes Sociales.)</p>
+    <p><b>Alexander Tercero Moreno:</b> Música y Guión. (Real: Música y Guión.)</p>
     <p>e-mail: equipoefed@gmail.com</p>
   </div>
 </div>
@@ -330,7 +367,7 @@ function showSlides(n) {
 <div id="contributions"></div>
 <div class="w3-main w3-content w3-text-yellow" style="max-width:1000px; margin-top:60px">
   <hr class="w3-content" style="max-width:600px;height:3px;color:white;background-color:white">
-  <h2 class="w3-content w3-center" style="max-width:600px; margin-top:60px; margin-bottom:30px">Contribuciones</h2>
+  <h1 class="w3-content w3-center" style="max-width:600px; margin-top:60px; margin-bottom:30px">Contribuciones</h1>
   <div class="w3-row-padding" style="margin:0 -16px">
     <div class="w3-half w3-margin-bottom">
       <ul class="w3-ul w3-center" style="background: #c74f29;color:white">
@@ -407,7 +444,7 @@ function showSlides(n) {
 <div id="objectives"></div>
 <div class="w3-main w3-content w3-text-yellow" style="max-width:1600px; margin-top:60px">
   <hr class="w3-content" style="max-width:1000px;height:3px;color:white;background-color:white">
-  <h2 class="w3-content w3-center" style="max-width:600px; margin-top:50px; margin-bottom:30px">Objetivos</h2>
+  <h1 class="w3-content w3-center" style="max-width:600px; margin-top:50px; margin-bottom:30px">Objetivos</h1>
 </div>
 <div class="w3-main w3-content w3-text-white w3-center" style="max-width:1600px">
   <p class="w3-wide">5,000€ -> Adaptación y doblaje de todas las voces (sólo inglés). DESBLOQUEADO</p>
@@ -440,27 +477,44 @@ function showSlides(n) {
 <div id="fq"></div>
 <div class="w3-main w3-content w3-text-yellow" style="max-width:1600px; margin-top:60px">
   <hr class="w3-content" style="max-width:1000px;height:3px;color:white;background-color:white">
-  <h2 class="w3-content w3-center" style="max-width:600px; margin-top:50px; margin-bottom:30px">Preguntas Frecuentes</h2>
+  <h1 class="w3-content w3-center" style="max-width:600px; margin-top:50px; margin-bottom:30px">Preguntas Frecuentes</h1>
 </div>
-<div class="w3-main w3-content w3-text-white w3-justify" style="max-width:1600px">
-  <ul>
-    <li><h4>¿El juego tendrá DLCs?</h4></li>
-    <ul>
-      <h4>- Si se logra el objetivo establecido sacaremos un DLC unos meses después de sacar el juego que expandirá la historia de los personajes.</h4>
-    </ul>
-    <li><h4>¿Se añadirán nuevos personajes?</h4></li>
-    <ul>
-      <h4>- Tras la salida del juego se irán añadiendo cada cierto tiempo nuevos personajes?</h4>
-    </ul>
-    <li><h4>Pregunta 3</h4></li>
-    <ul>
-      <h4>- Respuesta 3</h4>
-    </ul>
-  </ul>
+<div class="w3-main w3-content" style="max-width:1600px">
+  <button class="accordion">¿El juego tendrá DLCs?</button>
+  <div class="panel">
+    <p>Si se logra el objetivo establecido sacaremos un DLC unos meses después de sacar el juego que expandirá la historia de los personajes.</p>
+  </div>
+
+  <button class="accordion">¿Se añadirán nuevos personajes?</button>
+  <div class="panel">
+    <p>Tras la salida del juego se irán añadiendo cada cierto tiempo nuevos personajes</p>
+  </div>
+
+  <button class="accordion">¿El juego se puede jugar contra otras personas?</button>
+  <div class="panel">
+    <p>Sí, aunque de momento esta función está solo disponible localmente. En caso de que se alcance el objetivo se desarrollará un modo multijugador online.</p>
+  </div>
 </div>
 
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
 <!--Comments-->
-<div id="disqus_thread" style="padding: 20px;"></div>
+<div id="disqus_thread" style="padding: 20px; margin-top:60px"></div>
 <script>
     /**
     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
@@ -484,7 +538,7 @@ function showSlides(n) {
 <div id="contact"></div>
 <div class="w3-container w3-light-grey" style="margin-top:60px">
   <div class="w3-content w3-center" style="max-width:600px">
-    <h2 class="w3-center"><b>Nuestras redes sociales</b></h2>
+    <h1 class="w3-center"><b>Nuestras redes sociales</b></h1>
     <p>Para mantenerte al día con el desarrollo síguenos en nuestras redes sociales</p>
     <a href="https://instagram.com/pillowf1ght_/" target="_blank"><img src="instagram.png" style="width:42px;height:42px;"></a>
     <a href="https://twitter.com/pillowf1ght_" target="_blank"><img src="twitter.png" style="width:42px;height:42px;"></a>
@@ -495,7 +549,7 @@ function showSlides(n) {
 </div>
 
 <p class="w3-center" style="color:white">ATENCIÓN: Esta página simula la campaña de microfinanciación de un videojuego ficticio (no representa un producto real). Práctica de Multimedia, 1º GDDV -Curso 20/21(Móstoles), URJC. La URJC no se hace responsable del contenido expuesto por el autor.</p>
-<p class="w3-center" style="color:white">Algunas de las imágenes y vídeos proceden de fuentes externas como las imágenes y música de Street Fighter y Mortal Kombat y de la serie Sword Art Online.</p>
+<p class="w3-center" style="color:white">El audio titulado Street Fighter ha sido tomado de la saga de videojuegos con mismo nombre Street Fighter.</p>
 <!-- End page content -->
 
 <script>
